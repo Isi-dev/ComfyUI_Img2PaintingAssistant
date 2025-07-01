@@ -35,9 +35,9 @@ class Painting():
     def process(self, image, painting_details, painting_blur, sharpness, brightness, hue, saturation, lightness, contrast, correct_black_Img, lineArt=None):
         imgNo =  image.shape[0]
         if imgNo == 1:
-            print("1 image received for conversion to Painting")
+            print("Adjusting Image Properties...")
         else:
-            print(f"{imgNo} images received for conversion to Painting")
+            print(f"{imgNo} images received for adjustment")
         paintings = []
         paintings2 = []
 
@@ -63,7 +63,7 @@ class Painting():
         paintings = torch.cat(paintings, dim=0)
         paintings2 = torch.cat(paintings2, dim=0)
         
-        print("Conversion complete!")
+        print("Task Completed!")
 
         return (paintings, paintings2)   
     
